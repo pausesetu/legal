@@ -8,7 +8,8 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1F2937; background: #FFFFFF; line-height: 1.8; font-size: 16px; }
-.header { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid #E5E7EB; background: #FFFFFF; position: sticky; top: 0; z-index: 10; }
+.header { border-bottom: 1px solid #E5E7EB; background: #FFFFFF; position: sticky; top: 0; z-index: 10; width: 100%; }
+.header-container { max-width: 760px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
 .header-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .header-icon { width: 36px; height: 36px; background: #1A73E8; border-radius: 9px; display: flex; align-items: center; justify-content: center; position: relative; }
 .header-icon::before, .header-icon::after { content: ''; position: absolute; width: 4px; height: 14px; background: #FFFFFF; border-radius: 2px; }
@@ -20,30 +21,32 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans
 .header-name span:last-child { color: #059669; }
 .back-link { color: #6B7280; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
 .back-link:hover { color: #1A73E8; }
-.container { max-width: 760px; margin: 0 auto; padding: 60px 24px 80px; }
+.container { max-width: 760px; margin: 0 auto; padding: 50px 24px 80px; }
 .badge { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1A73E8; margin-bottom: 12px; }
-h1 { font-size: 42px; font-weight: 700; color: #1F2937; line-height: 1.2; margin-bottom: 8px; }
+h1 { font-size: 38px; font-weight: 700; color: #1F2937; line-height: 1.2; margin-bottom: 8px; letter-spacing: -0.5px; }
 .meta { font-size: 14px; color: #6B7280; margin-bottom: 24px; }
 .meta strong { color: #374151; }
 .intro-quote { border-left: 4px solid #1A73E8; padding: 16px 20px; background: #F8FAFC; font-style: italic; color: #4B5563; margin: 24px 0 32px; border-radius: 0 8px 8px 0; }
-h2 { font-size: 22px; font-weight: 700; color: #1F2937; margin-top: 40px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #E5E7EB; }
-p { margin-bottom: 14px; color: #374151; }
-ul { margin: 12px 0 24px 24px; list-style-type: disc; }
-li { margin-bottom: 10px; color: #374151; padding-left: 4px; }
+h2 { font-size: 22px; font-weight: 700; color: #1F2937; margin-top: 40px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid #E5E7EB; }
+p { margin-bottom: 16px; color: #374151; text-align: justify; }
+ul { margin: 16px 0 24px 0; padding-left: 22px; list-style-type: disc; }
+li { margin-bottom: 12px; color: #374151; line-height: 1.7; }
 li strong { color: #1F2937; }
 a { color: #1A73E8; text-decoration: none; }
 a:hover { text-decoration: underline; }
-.footer { max-width: 760px; margin: 0 auto; padding: 24px; border-top: 1px solid #E5E7EB; text-align: center; color: #9CA3AF; font-size: 13px; line-height: 1.6; }
-@media (max-width: 640px) { .header { padding: 12px 16px; } .container { padding: 32px 16px 60px; } h1 { font-size: 30px; } h2 { font-size: 19px; } }
+.footer { border-top: 1px solid #E5E7EB; text-align: center; color: #9CA3AF; font-size: 13px; padding: 30px 24px; margin-top: 40px; }
+@media (max-width: 640px) { .header-container { padding: 12px 16px; } .container { padding: 32px 16px 60px; } h1 { font-size: 28px; } h2 { font-size: 19px; } }
 </style>
 </head>
 <body>
 <header class="header">
-  <a href="https://pausesetu.in" class="header-brand">
-    <div class="header-icon"><div class="arch"></div></div>
-    <div class="header-name"><span>Pause</span><span>Setu</span></div>
-  </a>
-  <a href="https://pausesetu.in" class="back-link">&larr; Back to Home</a>
+  <div class="header-container">
+    <a href="https://pausesetu.in" class="header-brand">
+      <div class="header-icon"><div class="arch"></div></div>
+      <div class="header-name"><span>Pause</span><span>Setu</span></div>
+    </a>
+    <a href="https://pausesetu.in" class="back-link">&larr; Back to Home</a>
+  </div>
 </header>
 <main class="container">
   <div class="badge">Legal Document</div>
@@ -127,9 +130,10 @@ a:hover { text-decoration: underline; }
     Website: <a href="https://pausesetu.in">https://pausesetu.in</a><br>
     Jurisdiction: Lakhimpur, Assam, India
   </p>
+  
+  <footer class="footer">
+    &copy; 2026 PauseSetu. All rights reserved. | Document Version 2.0 | Last revised May 19, 2026
+  </footer>
 </main>
-<footer class="footer">
-  &copy; 2026 PauseSetu. All rights reserved. | Document Version 2.0 | Last revised May 19, 2026
-</footer>
 </body>
 </html>
